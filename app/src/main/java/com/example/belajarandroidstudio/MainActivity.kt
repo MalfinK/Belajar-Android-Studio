@@ -20,5 +20,10 @@ class MainActivity : AppCompatActivity() {
         val sayHelloTextView: TextView = findViewById(R.id.sayHelloTextView)
 
         sayHelloTextView.text = "Hi"
+
+        sayHelloButton.setOnClickListener {
+            val name = nameEditText.text.toString()
+            sayHelloTextView.text = "Hi $name"
+        }
     }
 }
