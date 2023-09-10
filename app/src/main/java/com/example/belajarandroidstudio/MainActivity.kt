@@ -7,6 +7,18 @@ import android.widget.EditText
 import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var nameEditText: EditText
+    private lateinit var sayHelloButton: Button
+    private lateinit var sayHelloTextView: TextView
+
+    private fun initComponents() {
+        // mau ambil semua view nya dari id yang sudah di tambahkan di hello_world
+        nameEditText = findViewById(R.id.nameEditText)
+        sayHelloButton = findViewById(R.id.sayHelloButton)
+        sayHelloTextView = findViewById(R.id.sayHelloTextView)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.hello_world)
@@ -14,10 +26,7 @@ class MainActivity : AppCompatActivity() {
         // mendapatkan id dari file hello_world
         // R.id.nameEditText
 
-        // mau ambil semua view nya dari id yang sudah di tambahkan di hello_world
-        val nameEditText: EditText = findViewById(R.id.nameEditText)
-        val sayHelloButton: Button = findViewById(R.id.sayHelloButton)
-        val sayHelloTextView: TextView = findViewById(R.id.sayHelloTextView)
+        initComponents()
 
         sayHelloTextView.text = "Hi"
 
