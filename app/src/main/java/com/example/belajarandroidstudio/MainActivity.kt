@@ -2,6 +2,7 @@ package com.example.belajarandroidstudio
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -31,6 +32,12 @@ class MainActivity : AppCompatActivity() {
         sayHelloTextView.text = "Hi"
 
         sayHelloButton.setOnClickListener {
+
+            Log.d("MAK", "This is debug log")
+            Log.i("MAK", "This is info log")
+            Log.w("MAK", "This is warn log")
+            Log.e("MAK", "This is error log")
+
             val name = nameEditText.text.toString()
             sayHelloTextView.text = "Hi $name"
         }
